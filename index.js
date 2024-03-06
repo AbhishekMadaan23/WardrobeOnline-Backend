@@ -25,6 +25,9 @@ mongoose
 
 //----------------CREATING OUR REST API
 
+app.use("/health", (req, res) => {
+  res.send("hello server is running");
+});
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute); // using our imported userRoute (basically whenever user uses/api/user our browser will use userRoute)
 app.use("/api/products", productRoute);
